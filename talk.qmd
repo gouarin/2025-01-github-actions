@@ -1,0 +1,194 @@
+---
+title: Cadre de développement et <br>automatisation pour l'open source
+author:
+    - Loïc Gouarin
+format:
+  revealjs:
+    css: css/light.css
+    slide-number: true
+
+    # center: True
+highlight-style: github
+footer: CNRS - <img width="5%" src="figures/by-sa.png"/> - 30 et 31 janvier 2025
+---
+
+# Faisons connaissance{.text-center}
+
+```{=html}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+```
+
+
+# {.center}
+
+:::{.row}
+::::{.col-4}
+<img class="m-0" src="figures/loic_small.png">
+::::
+::::{.col .align-self-center}
+- Ingénieur de recherche en calcul scientifique au CNRS
+- Co-responsable de l'équipe HPC@Maths
+- Membre du bureau du groupe Calcul
+- Développeur de logiciels open-source
+::::
+:::
+
+:::{.row}
+::::{.col-4}
+::::
+::::{.col}
+:::::{.row .mt-5 .text-center}
+::::::{.col .align-self-center}
+<img width="50%" src="figures/samurai.png">
+::::::
+::::::{.col .align-self-center}
+<img width="70%" src="figures/pylbm_logo.png">
+::::::
+::::::{.col .align-self-center}
+ <img width="70%" src="figures/scopi.png">
+::::::
+:::::
+::::
+:::
+
+# {.center .text-center}
+
+<iframe width="100%" height="400px" src="https://directpoll.com/r?XDbzPBdIoNwJmL01KaRGH2ff9r0d1d2tmUHWfDPDlBiFzJy" style="border:none;"></iframe>
+
+## Pourquoi cette formation ?
+
+- Le développement logiciel a une place de plus en plus importante dans nos métiers.
+- Ouvrir nos codes de recherche fait partie de la démarche de science ouverte.
+- Un cadre de développement devient alors nécessaire.
+- Lors du processus de développement, de nombreuses tâches sont répétitives et peuvent être source d’erreurs ou de régressions de l’application.
+
+
+:::{.mt-5 .text-center .color .fragment}
+**Peut-on faciliter la vie des contributeurs et des mainteneurs ?**
+:::
+
+## Objectifs
+
+- Améliorer et sécuriser son processus de développement.
+- Diffuser son travail de manière semi-automatique et l’ouvrir au plus grand nombre.
+- Comprendre le fonctionnement de GitHub Actions.
+- Acquérir une autonomie pour mettre en place ses propres workflows.
+
+# {.center}
+
+:::{.text-center}
+L’ensemble du matériel se trouve ici <br> [https://github.com/gouarin/dev_env_and_automatisation](https://github.com/gouarin/dev_env_and_automatisation)
+:::
+
+:::{.my-5 .text-center}
+Pour chaque partie, une correction dans le répertoire **material**.
+:::
+
+:::{.text-center}
+Si des fichiers sont nécessaires pour réaliser les exercices,<br>ils se trouveront dans **material/required_files**.
+:::
+
+# Environnement de développement {.text-center}
+
+## Qu'est-ce que c'est ?
+
+- Définition des outils et des dépendances
+- S'appuie sur des gestionnaires de paquets
+- Doit être le plus stable possible
+- Permet à un contributeur d'être autonome et rapidement opérationnel
+- Facilite l'engagement
+
+:::{.mt-5 .text-center .fragment}
+Exemple d'outil: **yarn, cargo, poetry, conda, spack, nix, guix, ...**
+:::
+
+# {.center}
+
+:::{.row}
+::::{.col-4 .text-center .align-self-center}
+![](figures/pixi.webp)
+::::
+::::{.col}
+- Beaucoup plus intéressant que conda ou mamba.
+- Permet d'avoir les fonctionnalités que l'on a en javascript avec *package.json*.
+- Fonctionne sur tous les OS.
+- S'appuie sur les paquets disponibles sur *conda-forge*.
+
+:::{.text-center}
+[https://pixi.sh/](https://pixi.sh/)
+:::
+::::
+:::
+
+# {.center}
+
+:::{.text-center .fs-2}
+[https://gouarin.github.io/dev_env_and_automatisation/environment](https://gouarin.github.io/dev_env_and_automatisation/environment)
+:::
+
+# La communication {.text-center}
+
+## Pour quoi faire ?
+
+- Favorise l'échange entre les différents acteurs.
+- Pose un cadre pour le développement mais également sur la forme de l'échange.
+- Créer une communauté autour du logiciel.
+
+## Sous quelle forme ?
+
+- Le choix de la licence
+- Le choix de la langue
+- Le readme et la documentation qui répondent aux questions
+  - que fait le logiciel ?
+  - comment installer le logiciel ?
+  - comment se servir du logiciel ?
+- Les règles de bonnes conduites
+- Une note sur comment contribuer
+- Les issues
+
+# {.center}
+
+:::{.text-center .fs-2}
+[https://gouarin.github.io/dev_env_and_automatisation/communication](https://gouarin.github.io/dev_env_and_automatisation/communication)
+:::
+
+# Faciliter l'ajout de code {.text-center}
+
+## Pour quoi faire ?
+
+- Le logiciel repose sur du code.
+- Imaginez un roman où le style change à chaque page. C'est difficile à lire !
+- Ne plus se poser de questions et juste écrire son algorithme.
+- Facilite les ajouts de tout le monde.
+- Met encore une fois un cadre qu'on ne discute pas.
+
+## Sous quelle forme ?
+
+- Le formatage du code
+- L'analyse statique
+- Le pre-commit
+
+# {.center}
+
+:::{.text-center .fs-2}
+[https://gouarin.github.io/dev_env_and_automatisation/pre-commit](https://gouarin.github.io/dev_env_and_automatisation/pre-commit)
+:::
+
+# {.center .text-center .fs-2}
+
+Passons à la pratique !
+
+:::{.mt-3}
+[Configuration du dépôt GitHub](https://gouarin.github.io/dev_env_and_automatisation/depot)
+:::
+
+:::{.mt-3}
+[Mise en place de l'environnement de développement via pixi](https://gouarin.github.io/dev_env_and_automatisation/environment#pixi)
+:::
+
+:::{.mt-3}
+[Automatisation du cadre via GitHub Actions](https://gouarin.github.io/dev_env_and_automatisation/intro-github-actions)
+:::
+
+
