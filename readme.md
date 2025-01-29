@@ -9,3 +9,6 @@ It's in French, but an English translation should come soon.
 The slides use [Quarto](https://quarto.org/) and are available here
 
 https://gouarin.github.io/2025-01-github-actions
+
+## Licence
+Ce projet est sous licence [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
